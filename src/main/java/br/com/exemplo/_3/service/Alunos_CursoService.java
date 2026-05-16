@@ -16,9 +16,9 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class Alunos_CursoService {
 
-    AlunoRespository alunoRespository;
-    CursoRepository cursoRepository;
-    Alunos_cursosRepository alunosCursosRepository;
+  public final  AlunoRespository alunoRespository;
+  public final CursoRepository cursoRepository;
+  public final Alunos_cursosRepository alunosCursosRepository;
 
     public Alunos_cursos cadastrar(Long curso_Id, Long aluno_Id){
         Aluno aluno = alunoRespository.findById(aluno_Id)
