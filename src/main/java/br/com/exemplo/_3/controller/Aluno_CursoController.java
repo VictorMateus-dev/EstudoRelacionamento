@@ -12,6 +12,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/aluno-Curso")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class Aluno_CursoController {
 
     private final Alunos_CursoService alunosCursoService;

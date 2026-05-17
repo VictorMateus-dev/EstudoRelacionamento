@@ -1,5 +1,6 @@
 package br.com.exemplo._3.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,4 +21,7 @@ public class Aluno {
 
     private String alunoName;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "aluno", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Alunos_cursos> matriculas = new ArrayList<>();
 }
