@@ -34,4 +34,9 @@ public class AlunoService {
     public Aluno cadastrar(Aluno aluno){
         return alunoRespository.save(aluno);
     }
+
+    public Aluno atualizar(Aluno aluno, Long id){
+        aluno.setId(id);
+        return alunoRespository.save(aluno);
+    }
 }

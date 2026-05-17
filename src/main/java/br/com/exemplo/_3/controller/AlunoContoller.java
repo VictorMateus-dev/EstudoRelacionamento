@@ -35,4 +35,9 @@ public class AlunoContoller {
         return alunoService.cadastrar(aluno);
     }
 
+    @PutMapping("/{id}")
+    public Aluno atualizar(@RequestBody Aluno aluno, @PathVariable Long id){
+        return alunoService.atualizar(aluno, id);
+    }
+
 }
