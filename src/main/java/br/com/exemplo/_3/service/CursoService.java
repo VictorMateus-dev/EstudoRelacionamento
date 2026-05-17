@@ -29,4 +29,9 @@ public class CursoService {
     public Cursos cadastrarCursos(Cursos cursos){
         return  cursoRepository.save(cursos);
     }
+
+    public Cursos atualizar(Cursos curso,Long id){
+        curso.setId(id);
+        return cursoRepository.save(curso);
+    }
 }

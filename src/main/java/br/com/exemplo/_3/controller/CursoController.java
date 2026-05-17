@@ -39,4 +39,9 @@ public class CursoController {
     public Cursos cadastrar(@RequestBody Cursos curso){
         return cursoService.cadastrarCursos(curso);
     }
+
+    @PutMapping("/{id}")
+    public Cursos atualizar(@RequestBody Cursos curso, @PathVariable Long id){
+        return cursoService.atualizar(curso, id);
+    }
 }
